@@ -1,16 +1,14 @@
-function checkPalindrome(string) {
+function checkPalindrome(text) {
   let array = [];
   let result = "";
-  string = string.toLowerCase();
+  text = text.toLowerCase();
 
-  for (x = string.length - 1; x >= 0; x--) {
-    array.push(string[x]);
+  for (x = text.length - 1; x >= 0; x--) {
+    array.push(text[x]);
   }
-
   rev = array.join("");
-
-  if (string.length > 2) {
-    if (string == rev) {
+  if (text.length > 2) {
+    if (text == rev) {
       result = "ini adalah palindrome";
     } else {
       result = "ini bukan palindrome";
@@ -22,3 +20,5 @@ function checkPalindrome(string) {
 }
 
 console.log(checkPalindrome("Asuka"));
+console.log(checkPalindrome("Asusa"));
+console.log(checkPalindrome("Aa"));
